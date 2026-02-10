@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>LuxCart — Shop</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="index.html">
+        <div class="brand-mark" aria-hidden="true"></div>
+        <div>
+          <div class="brand-name">LuxCart</div>
+          <span class="brand-sub">Shop</span>
+        </div>
+      </a>
+      <nav class="navlinks">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="cart.html">Cart</a>
+      </nav>
+      <div class="actions">
+        <a class="iconbtn" href="cart.html">Cart <span class="badge" id="cartBadge">0</span></a>
+        <button class="iconbtn" type="button" onclick="alert('Demo login screen.')">Login</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container section">
+    <div class="kicker reveal">Catalog</div>
+    <h2 class="reveal">Browse products</h2>
+
+    <div class="toolbar reveal">
+      <div class="field">
+        <label for="searchInput">Search</label>
+        <input id="searchInput" type="text" placeholder="Search products..." />
+      </div>
+
+      <div class="field">
+        <label for="categoryFilter">Category</label>
+        <select id="categoryFilter"></select>
+      </div>
+
+      <div class="field">
+        <label for="priceFilter">Max price</label>
+        <input id="priceFilter" type="range" min="0" value="500" />
+        <div class="help" id="priceLabel">Up to $0.00</div>
+      </div>
+
+      <div class="field">
+        <label for="sortBy">Sort</label>
+        <select id="sortBy">
+          <option value="featured">Featured</option>
+          <option value="ratingHigh">Rating (high)</option>
+          <option value="priceLow">Price (low)</option>
+          <option value="priceHigh">Price (high)</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="grid products" id="shopGrid"></div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <b>LuxCart</b>
+        <p>Simple, modern, product-focused shopping.</p>
+      </div>
+      <div><b>Links</b><p><a href="index.html">Home</a></p><p><a href="cart.html">Cart</a></p></div>
+      <div><b>Support</b><p class="small">support@luxcart.example</p></div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

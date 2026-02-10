@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>LuxCart — Checkout</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- NAV -->
+  <header class="topbar">
+  <div class="container topbar-inner">
+    <a class="brand" href="index.html">
+      <div class="brand-mark" aria-hidden="true"></div>
+      <div>
+        <div class="brand-name">LuxCart</div>
+        <span class="brand-sub">Checkout</span>
+      </div>
+    </a>
+
+    <nav class="navlinks" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="cart.html">Cart</a>
+    </nav>
+
+    <div class="actions">
+      <a class="iconbtn" href="cart.html">
+        Cart <span class="badge" id="cartBadge">0</span>
+      </a>
+      <button class="iconbtn" type="button" onclick="alert('Demo login screen.')">
+        Login
+      </button>
+    </div>
+  </div>
+</header>
+
+
+  <main class="container section">
+    <div class="kicker reveal">Low-friction</div>
+    <h2 class="reveal">One-page checkout</h2>
+
+    <div class="progress reveal" aria-label="Checkout progress">
+      <div class="step"><i id="progressFill"></i></div>
+      <div class="small mono" style="white-space:nowrap">Complete required fields</div>
+    </div>
+
+    <section class="split">
+      <!-- Form -->
+      <form class="panel reveal" id="checkoutForm">
+        <h2 style="margin:0 0 10px">Shipping & payment</h2>
+
+        <div class="grid" style="grid-template-columns: 1fr 1fr; gap:12px">
+          <div class="field">
+            <label for="name">Full name *</label>
+            <input id="name" name="name" data-required="true" type="text" placeholder="e.g., Sarah Parker" autocomplete="name" />
+          </div>
+
+          <div class="field">
+            <label for="email">Email *</label>
+            <input id="email" name="email" data-required="true" type="email" placeholder="you@example.com" autocomplete="email" />
+          </div>
+
+          <div class="field" style="grid-column: 1 / -1">
+            <label for="address">Address *</label>
+            <input id="address" name="address" data-required="true" type="text" placeholder="Street, building, apartment" autocomplete="street-address" />
+          </div>
+
+          <div class="field">
+            <label for="city">City *</label>
+            <input id="city" name="city" data-required="true" type="text" placeholder="City" autocomplete="address-level2" />
+          </div>
+
+          <div class="field">
+            <label for="payment">Payment method *</label>
+            <select id="payment" name="payment" data-required="true">
+              <option value="">Select...</option>
+              <option>Card (Visa / MasterCard)</option>
+              <option>Cash on delivery</option>
+              <option>Bank transfer</option>
+            </select>
+          </div>
+
+          <div class="field" style="grid-column: 1 / -1">
+            <label for="note">Delivery note (optional)</label>
+            <textarea id="note" rows="3" placeholder="Optional: building code, delivery time, etc."></textarea>
+          </div>
+        </div>
+
+        <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap">
+          <button class="btn primary" type="submit" style="flex:1; min-width:220px">Confirm purchase</button>
+          <a class="btn" href="shop.html">Continue shopping</a>
+        </div>
+
+        <p class="notice">
+          Auto-validation highlights missing fields. After confirmation, the cart is cleared (demo flow).
+        </p>
+      </form>
+
+      <!-- Summary -->
+      <aside class="panel summary reveal">
+        <h2 style="margin:0 0 10px">Order summary</h2>
+
+        <div id="coItems" style="display:flex; flex-direction:column; gap:8px"></div>
+
+        <div style="margin-top:12px">
+          <div class="line"><span>Subtotal</span> <strong id="coSubtotal">$0.00</strong></div>
+          <div class="line"><span>Shipping</span> <strong id="coShipping">$0.00</strong></div>
+          <div class="line"><span>Tax</span> <strong id="coTax">$0.00</strong></div>
+          <div class="total"><span>Total</span> <strong id="coTotal">$0.00</strong></div>
+        </div>
+
+        <p class="notice">Designed for speed: minimal fields, clear totals, big confirm button.</p>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>LuxCart</strong>
+        <p>Premium UI • Fast checkout • Local cart saving</p>
+      </div>
+      <div>
+        <strong>Links</strong>
+        <p><a href="cart.html">Cart</a></p>
+        <p><a href="shop.html">Shop</a></p>
+      </div>
+      <div>
+        <strong>Contact</strong>
+        <p class="small">support@luxcart.example</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>LuxCart — Cart</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- NAV -->
+  <header class="topbar">
+  <div class="container topbar-inner">
+    <a class="brand" href="index.html">
+      <div class="brand-mark" aria-hidden="true"></div>
+      <div>
+        <div class="brand-name">LuxCart</div>
+        <span class="brand-sub">Cart</span>
+      </div>
+    </a>
+
+    <nav class="navlinks" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="cart.html">Cart</a>
+    </nav>
+
+    <div class="actions">
+      <a class="iconbtn" href="cart.html">
+        Cart <span class="badge" id="cartBadge">0</span>
+      </a>
+      <button class="iconbtn" type="button" onclick="alert('Demo login screen.')">
+        Login
+      </button>
+    </div>
+  </div>
+</header>
+
+
+  <main class="container section">
+    <div class="kicker reveal">Your selection</div>
+    <h2 class="reveal">Shopping cart</h2>
+
+    <section class="split">
+      <div class="table reveal">
+        <div class="table-head">
+          <span>Item</span>
+          <span>Total</span>
+        </div>
+        <div id="cartList"></div>
+      </div>
+
+      <aside class="panel summary reveal">
+        <h2 style="margin:0 0 8px">Summary</h2>
+        <div class="line"><span>Subtotal</span> <strong id="sumSubtotal">$0.00</strong></div>
+        <div class="line"><span>Shipping</span> <strong id="sumShipping">$0.00</strong></div>
+        <div class="line"><span>Tax</span> <strong id="sumTax">$0.00</strong></div>
+        <div class="total"><span>Total</span> <strong id="sumTotal">$0.00</strong></div>
+
+        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px">
+          <a class="btn" href="shop.html">Continue shopping</a>
+          <a class="btn primary" href="checkout.html">Checkout</a>
+        </div>
+
+        <p class="notice">Totals update instantly. Cart is saved locally.</p>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>LuxCart</strong>
+        <p>Luxury checkout flow—minimal friction.</p>
+      </div>
+      <div>
+        <strong>Links</strong>
+        <p><a href="shop.html">Shop</a></p>
+      </div>
+      <div>
+        <strong>Support</strong>
+        <p class="small">support@luxcart.example</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

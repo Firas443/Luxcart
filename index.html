@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>LuxCart — Modern Premium Store</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- TOPBAR -->
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="index.html">
+        <div class="brand-mark" aria-hidden="true"></div>
+        <div>
+          <div class="brand-name">LuxCart</div>
+          <span class="brand-sub">Modern premium store</span>
+        </div>
+      </a>
+
+      <nav class="navlinks" aria-label="Primary">
+        <a href="shop.html">Shop</a>
+        <a href="#categories">Categories</a>
+        <a href="#featured">Featured</a>
+        <a href="#deals">Deals</a>
+      </nav>
+
+      <div class="actions">
+        <a class="iconbtn" href="shop.html">Shop</a>
+        <a class="iconbtn" href="cart.html">Cart <span class="badge" id="cartBadge">0</span></a>
+        <button class="iconbtn" type="button" onclick="alert('Demo login screen.')">Login</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-wrap reveal">
+        <div class="hero-left">
+          <div class="kicker">New drop • 2026</div>
+          <h1 class="hero-title" id="heroTitle">Upgrade your <span>everyday tech</span></h1>
+          <p class="hero-sub" id="heroSub"></p>
+
+          <div class="pills">
+            <div class="pill">Free shipping over $120</div>
+            <div class="pill">Secure payment</div>
+            <div class="pill">Fast delivery 48h</div>
+          </div>
+
+          <div class="hero-cta">
+            <a class="btn primary" id="heroShop" href="shop.html">Shop now</a>
+            <a class="btn" id="heroView" href="product.html">View product</a>
+            <button class="btn" id="heroAdd" type="button">Quick add</button>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="price-bubble" id="heroPrice">$0.00</div>
+          <img class="hero-product" id="heroImg" alt="Featured product" />
+          <div class="mini-card">
+            <b id="heroMiniTitle">—</b>
+            <span id="heroMiniMeta">—</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORIES -->
+    <section class="section" id="categories">
+      <div class="kicker reveal">Browse by category</div>
+      <h2 class="reveal">Find your vibe</h2>
+      <div class="cat-row reveal" id="catRow"></div>
+    </section>
+
+    <!-- PROMOS -->
+    <section class="section" id="deals">
+      <div class="kicker reveal">Deals & highlights</div>
+      <h2 class="reveal">Featured promos</h2>
+
+      <div class="promo-grid">
+        <div class="promo reveal">
+          <div class="content">
+            <h3>Enhance your music experience</h3>
+            <p>Premium audio lineup with clean design and powerful sound.</p>
+            <div style="margin-top:12px">
+              <a class="btn primary" href="shop.html?cat=Audio">Shop Audio</a>
+            </div>
+          </div>
+          <div class="media">
+            <img alt="promo" src="https://images.unsplash.com/photo-1518441313221-20f1d1ff0f65?auto=format&fit=crop&w=1400&q=80">
+          </div>
+        </div>
+
+        <div class="tiles">
+          <div class="tile red reveal">
+            <h3>Summer sale</h3>
+            <p>Up to 30% off selected items.</p>
+            <a class="btn" href="shop.html">Browse</a>
+          </div>
+          <div class="tile gold reveal">
+            <h3>Wearables</h3>
+            <p>Minimal watches that look expensive.</p>
+            <a class="btn" href="shop.html?cat=Wearables">Explore</a>
+          </div>
+          <div class="tile blue reveal">
+            <h3>Gaming</h3>
+            <p>Controllers built for comfort and control.</p>
+            <a class="btn" href="shop.html?cat=Gaming">Shop</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PRODUCTS -->
+    <section class="section" id="featured">
+      <div class="kicker reveal">Explore products</div>
+      <h2 class="reveal">Best sellers</h2>
+      <div class="grid products" id="featuredGrid"></div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true"></div>
+          <div>
+            <div class="brand-name">LuxCart</div>
+            <span class="brand-sub">Modern premium store</span>
+          </div>
+        </div>
+        <p>Inspired by modern ecommerce layouts: clean spacing, bold hero, and product-first sections.</p>
+        <p class="small">© 2026 LuxCart</p>
+      </div>
+      <div>
+        <b>Links</b>
+        <p><a href="shop.html">Shop</a></p>
+        <p><a href="cart.html">Cart</a></p>
+        <p><a href="checkout.html">Checkout</a></p>
+      </div>
+      <div>
+        <b>Contact</b>
+        <p class="small">support@luxcart.example</p>
+        <p class="small">+216 00 000 000</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

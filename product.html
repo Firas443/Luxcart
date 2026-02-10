@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>LuxCart — Product</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- NAV -->
+  <header class="topbar">
+  <div class="container topbar-inner">
+    <a class="brand" href="index.html">
+      <div class="brand-mark" aria-hidden="true"></div>
+      <div>
+        <div class="brand-name">LuxCart</div>
+        <span class="brand-sub">Product</span>
+      </div>
+    </a>
+
+    <nav class="navlinks" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="cart.html">Cart</a>
+    </nav>
+
+    <div class="actions">
+      <a class="iconbtn" href="cart.html">Cart <span class="badge" id="cartBadge">0</span></a>
+      <button class="iconbtn" type="button" onclick="alert('Demo login screen.')">Login</button>
+    </div>
+  </div>
+</header>
+
+
+  <main class="container section" id="productRoot">
+    <div class="kicker reveal">Product detail</div>
+
+    <section class="detail">
+      <!-- Gallery -->
+      <div class="gallery reveal">
+        <div class="gallery-main">
+          <img id="pdMainImg" src="" alt="Product image">
+        </div>
+        <div class="gallery-thumbs" id="pdThumbs"></div>
+      </div>
+
+      <!-- Info -->
+      <div class="panel reveal">
+        <h1 id="pdTitle">—</h1>
+
+        <div class="row">
+          <div class="price" id="pdPrice">$0.00</div>
+          <div id="pdRating"></div>
+        </div>
+
+        <p id="pdDesc"></p>
+
+        <div class="row" style="margin-top:16px">
+          <div class="qty">
+            <button id="pdMinus" type="button">−</button>
+            <input id="pdQty" type="number" min="1" max="99" value="1" />
+            <button id="pdPlus" type="button">+</button>
+          </div>
+          <span class="small">Free shipping over <span class="mono">$120</span></span>
+        </div>
+
+        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px">
+          <button class="btn" id="pdAdd" type="button">Add to cart</button>
+          <button class="btn primary" id="pdBuy" type="button">Buy now</button>
+          <a class="btn" href="cart.html">Go to cart</a>
+        </div>
+
+        <p class="notice">Designed for fast reading. Minimal steps to purchase.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="kicker reveal">You may also like</div>
+      <h2 class="reveal">Related products</h2>
+      <div class="grid products" id="relatedGrid"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>LuxCart</strong>
+        <p>Luxury-style UI built with pure HTML/CSS/JS.</p>
+      </div>
+      <div>
+        <strong>Links</strong>
+        <p><a href="shop.html">Shop</a></p>
+        <p><a href="checkout.html">Checkout</a></p>
+      </div>
+      <div>
+        <strong>Contact</strong>
+        <p class="small">support@luxcart.example</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
